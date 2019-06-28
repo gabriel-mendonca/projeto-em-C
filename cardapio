@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <match.h>
+
+int main()
+{
+    int pedido = 1;
+    int quantidade = 0;
+    int quantidadetotal = 0;
+    float valortotal = 0;
+    
+    
+    while (pedido != 0)
+    { 
+        
+        printf ("  ************************menu***********************\n");
+        printf ("  espeficacao          codigo              preco    *\n");
+        printf ("  cachorro quente        100                1.20    *\n");
+        printf ("  bauru simples          101                1.30    *\n");
+        printf ("  bauru com ovo          102                1.50    *\n");
+        printf ("  hamburguer             103                1.20    *\n");
+        printf ("  cheesburguer           104                1.70    *\n");
+        printf ("  suco                   105                2.20    *\n");
+        printf ("  refrigerante           106                1.00    *\n");
+        printf ("  fechar pedido           1                         *\n");
+        printf ("  fechar programa         0                         *\n");
+        
+        printf("escreva seu pedido\n");
+        scanf("%d",&pedido);
+        
+        if (pedido == 1){
+            pedido = 0;
+            printf ("seu pedido de %d itens ficou em R$ %2.f",quantidadetotal,valortotal);
+        } else {
+            printf("\n digite a quantidade de itens? \n");
+            scanf ("%d",&quantidade);
+        }
+        
+        
+             quantidadetotal += quantidade;
+             
+             
+             if(pedido == 100){
+                 valortotal += 1.2 * quantidade;
+             }
+             else if (pedido == 102){
+             valortotal += 1.5 * quantidade;
+    }
+             else if(pedido == 103){
+                 valortotal += 1.2 * quantidade;
+             }
+             else if (pedido == 104){
+                 valortotal += 1.7 * quantidade;
+             }
+             else if (pedido == 105){
+                 valortotal += 2.2 * quantidade;
+             }
+             else if (pedido == 106){
+                 valortotal += 1.0 * quantidade;
+             }
+        
+            
+        }
+        
+        
+        
+        
+    
+    return 0;
+}
